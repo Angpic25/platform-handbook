@@ -1,0 +1,52 @@
+---
+title: Touchpoint Overview
+description: Compliance metrics, trend chart, user impact breakdown, and user flows for a single touchpoint.
+---
+
+import { Callout } from 'nextra/components'
+
+# Touchpoint Overview
+
+The Touchpoint overview is the main dashboard for a single touchpoint. It provides a comprehensive view of compliance status, issue distribution, and progress over time.
+
+![Touchpoint overview tour showing compliance metrics, trend chart, user impact, and user flows](/images/video-touchpoint-overview.gif)
+
+## What the client sees
+
+- **Header** with touchpoint name, a dropdown switcher to navigate between touchpoints, and the last audit date.
+- **Tab navigation** with three tabs: Overview, Issues, and Integrations.
+- **Compliance metrics** showing overall compliance percentage, plus counts for Open, Fixed, Resolved, and Dismissed issues.
+- **Issue trend chart** with area chart, pattern chart, and data table views, plus a time filter and CSV export.
+- **Issues by user impact** breakdown showing Critical, High, and Low severity distribution with percentages.
+
+### Compliance metrics
+
+![Compliance metrics panel showing overall compliance percentage and issue status breakdown](/images/placeholder-compliance-metrics.png)
+
+The compliance metrics section shows the overall compliance level as a percentage, along with a breakdown of issues by status: Open (purple), Fixed (pink), Resolved (green), and Dismissed (grey).
+
+### Trend chart
+
+![Trend chart showing issue status changes over time with area chart visualization](/images/placeholder-trend-chart.png)
+
+The trend chart allows the client to track progress month by month. For each time period, the chart shows how many issues are still open, how many have been marked as fixed by the client team, and how many have been confirmed as resolved by AccessiWay experts. This makes it easy to monitor whether the remediation effort is progressing and how much expert validated work has been completed.
+
+![Trend chart detail view with data table showing exact numbers per month](/images/placeholder-trend-chart-detail.png)
+
+The chart supports three display modes (area chart, pattern chart, and data table), a time filter (e.g. "Last month"), and a CSV export button for downloading the raw data.
+
+### User impact
+
+![User impact breakdown showing Critical, High, and Low severity distribution](/images/placeholder-user-impact.png)
+
+Issues are grouped by their impact on real users: Critical (blocks essential tasks), High (affects main navigation), and Low (minor usability issues). Each level shows its percentage of the total issue count.
+
+### User flows
+
+![User flows section showing navigation paths with the highest concentration of critical issues](/images/placeholder-user-flows.png)
+
+The user flows section lists the navigation paths with the highest concentration of critical issues, helping the client prioritize which areas of the touchpoint to fix first.
+
+<Callout>
+The touchpoint overview updates in real time as issues are fixed, retested, and resolved. The client can export trend data as CSV for reporting purposes.
+</Callout>

@@ -1,0 +1,46 @@
+---
+title: Issue Detail
+description: The side panel with Overview, Fix, and Jira tabs showing full issue information.
+---
+
+import { Callout, Steps } from 'nextra/components'
+
+# Issue Detail
+
+Clicking on any issue in the issues table opens a side panel on the right with three tabs: Overview, Fix, and Jira.
+
+![Issue detail side panel showing the three tabs with full issue information](/images/video-issue-detail-tabs.gif)
+
+## Tabs
+
+**Overview tab** shows the full issue details: title, screenshot of the problematic element, Resolve and Dismiss buttons, mitigation status, element position, page name, issue type, severity, WCAG criteria, WCAG level, EN 301 549 reference, and creation date.
+
+**Fix tab** provides the suggested code level fix written by the AccessiWay expert, along with any additional expert comments and guidance.
+
+**Jira tab** shows the connection status with Jira. If the issue is linked to a Jira ticket, the ticket key and current status are displayed.
+
+<Steps>
+
+### Review the issue in the Overview tab
+
+The client reads the issue description, views the screenshot, and checks the severity and WCAG criteria to understand the problem.
+
+![Issue detail overview tab showing issue description, screenshot, and metadata](/images/placeholder-issue-detail.png)
+
+### Read the suggested fix in the Fix tab
+
+The client switches to the Fix tab to see the recommended code changes and expert comments.
+
+![Issue fix tab showing suggested remediation and expert comments](/images/placeholder-issue-fix.png)
+
+### Link to Jira in the Jira tab
+
+The client connects the issue to a Jira ticket for assignment and tracking within the development workflow.
+
+![Issue Jira tab showing ticket linking and status synchronization](/images/placeholder-issue-jira.png)
+
+</Steps>
+
+<Callout>
+The issue detail panel stays open while navigating the issues table, making it easy to review multiple issues in sequence.
+</Callout>

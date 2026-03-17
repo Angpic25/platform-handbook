@@ -1,0 +1,46 @@
+---
+title: Platform Architecture
+description: How the platform is structured around Accounts, Touchpoints, and Issues.
+---
+
+import { Callout } from 'nextra/components'
+
+# Platform Architecture
+
+The platform follows a clear hierarchy: **Account → Touchpoints → Issues**.
+
+## Account (Organization)
+
+An Account represents a single client organization (company). Each Account is created when a new client is onboarded to the platform. The Account is the top level container that holds all of the organization's accessibility data, settings, team members, and integrations.
+
+There is one Account per organization. All team members within the organization share the same Account and can see the same data.
+
+## Touchpoints
+
+Under each Account, there can be multiple Touchpoints. A Touchpoint represents a single website or digital application that is subject to accessibility analysis. For example, a banking group might have four separate touchpoints: a consumer banking site, a business payments portal, a wealth management platform, and a corporate website.
+
+Each Touchpoint has its own compliance dashboard, issue list, trend charts, and integration settings.
+
+## Issues
+
+Each Touchpoint contains a list of accessibility Issues identified by AccessiWay experts during audits. Issues are the core unit of work in the platform. Each issue includes a description, WCAG criteria, severity level, status, suggested fix, and expert comments.
+
+## Architecture diagram
+
+![Platform architecture diagram showing the hierarchy from Account to Touchpoints to Issues, with real data from a sample client](/images/placeholder-architecture.png)
+
+## Key components
+
+| Component | Description |
+|-----------|-------------|
+| **Home dashboard** | Company level overview with key metrics and highest impact touchpoints |
+| **Touchpoint overview** | Compliance metrics, trend chart, user impact breakdown, and user flows for a single touchpoint |
+| **Issue list** | Filterable, sortable table of all accessibility issues for a touchpoint |
+| **Issue detail sidebar** | Side panel with three tabs (Overview, Fix, Jira) showing full issue information |
+| **Expert retest** | On demand review by AccessiWay experts to validate that fixes meet accessibility requirements |
+| **Integrations** | Connect with project management tools (Jira available, Trello and Azure DevOps coming soon) |
+| **Settings** | Security (2FA) and team member management |
+
+<Callout type="warning">
+TO COMPLETE: add screenshots of each architectural layer once the platform walkthrough is recorded.
+</Callout>

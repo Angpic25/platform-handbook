@@ -1,11 +1,11 @@
 {
-  "index": "Features Overview",
+  "index": "Overview",
   "home-dashboard": "Home Dashboard",
   "touchpoints-list": "Touchpoints List",
   "touchpoint-overview": "Touchpoint Overview",
   "issue-management": "Issue Management",
   "issue-detail": "Issue Detail",
   "integrations": "Integrations",
-  "settings-team": "Settings & Team",
+  "settings-team": "Settings and Team",
   "platform-guide": "Platform Guide"
 }

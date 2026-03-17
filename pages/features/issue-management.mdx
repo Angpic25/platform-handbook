@@ -1,0 +1,75 @@
+---
+title: Issue Management
+description: How the issue list works, including filters, search, sorting, and the issue status lifecycle.
+---
+
+import { Callout, Steps } from 'nextra/components'
+
+# Issue Management
+
+The Issues tab within each touchpoint provides a complete issue management system. The client can search, filter, sort, and export accessibility issues, and request expert retests.
+
+![Issue management view showing the issues table with toolbar, filters, and sorting](/images/video-issue-management.gif)
+
+## How it works
+
+![Issues table showing columns for ID, description, WCAG criteria, severity, status, and type](/images/placeholder-issues-table.png)
+
+- **Search bar** to find issues by numeric ID or text description (minimum 3 characters).
+- **Advanced filters** for severity, status, comments, mitigation, type, WCAG criteria, and pages. Quick filter presets are available for Open issues, Critical issues, and Recurring issues.
+- **Sortable columns** including ID, WCAG criteria, Severity, Status, Comments, Mitigation, and Type.
+- **Export** the full issue list (or filtered subset) as CSV or Excel.
+- **Ask for a retest** button to request an expert review of all fixes applied to the touchpoint.
+
+![Issues toolbar showing search bar, filters button, export button, and retest request](/images/placeholder-issues-toolbar.png)
+
+## Issue status lifecycle
+
+The platform uses four statuses to track the progress of each issue:
+
+| Status | Who sets it | What it means |
+|--------|------------|---------------|
+| **Open** | System (default) | The issue has been identified by an expert but not yet addressed |
+| **Fixed** | The client | The client's development team has implemented a fix and marked the issue accordingly |
+| **Resolved** | AccessiWay expert | After a retest, the expert has confirmed that the fix meets accessibility requirements |
+| **Dismissed** | The client | The client has decided to archive or ignore the issue |
+
+The key distinction is between Fixed and Resolved. Only the client can mark an issue as Fixed (indicating their team has implemented a change). However, only an AccessiWay expert can mark an issue as Resolved, which happens after a retest confirms the fix is effective. This ensures that compliance improvements are always validated by a qualified expert.
+
+### Lifecycle flow
+
+The typical lifecycle follows this path:
+
+**Open → Fixed → Resolved**
+
+The client's team fixes the issue and marks it as Fixed. Then, when the client requests a retest, an AccessiWay expert reviews the touchpoint and confirms the fix by setting the status to Resolved.
+
+Alternatively, the client can dismiss an issue at any point:
+
+**Open → Dismissed**
+
+![Issue lifecycle diagram showing the flow from Open to Fixed to Resolved, with an alternative path to Dismissed](/images/placeholder-architecture.png)
+
+<Steps>
+
+### Identify and filter issues
+
+The client opens the Issues tab and uses filters to focus on the most critical or relevant issues.
+
+![Filter panel showing available filter options for severity, status, type, and WCAG criteria](/images/placeholder-filter-panel.png)
+
+![Filtering issues in action, demonstrating quick filters and advanced filter options](/images/video-filter-issues.gif)
+
+### Fix and mark as Fixed
+
+The development team implements the fix. The client then marks the issue as Fixed in the platform.
+
+### Request a retest
+
+The client clicks "Ask for a retest" to request expert validation. The AccessiWay expert reviews all fixed issues and sets confirmed ones to Resolved.
+
+</Steps>
+
+<Callout>
+Only AccessiWay experts can set an issue to Resolved. This ensures that all compliance improvements are independently validated through a professional retest.
+</Callout>

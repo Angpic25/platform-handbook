@@ -1,0 +1,48 @@
+---
+title: Settings and Team
+description: Security settings (2FA) and team member management.
+---
+
+import { Callout, Steps } from 'nextra/components'
+
+# Settings and Team
+
+The Settings panel is accessible from the left sidebar and opens as a modal overlay. It contains two sections: Security and Team Members.
+
+![Settings panel showing security and team management options](/images/placeholder-settings.png)
+
+## What the client sees
+
+- **Two Factor Authentication (2FA)** setup with QR code configuration for added account security.
+- **Team members table** showing name, email, role, and status (Active or Pending) for each member.
+- **Add team member** button to invite new members via email.
+- **Remove member** option (trash icon) to revoke access for a team member.
+- **Single Owner** per account: the Account owner is the primary administrator who can invite and manage other team members.
+- **Unlimited members**: there is no limit to the number of team members that can be invited to the account.
+- **Roles and permissions**: team members are assigned roles that determine their level of access within the platform.
+
+<Steps>
+
+### Open Settings
+
+The client clicks "Settings" in the left sidebar to open the settings modal.
+
+![Settings link in the sidebar navigation](/images/placeholder-settings-link.png)
+
+### Configure 2FA
+
+In the Security tab, the client clicks "Setup 2FA" and scans the QR code with an authenticator app to enable two factor authentication.
+
+![2FA setup flow with QR code scanning](/images/video-2fa-setup.gif)
+
+### Manage team members
+
+In the Team Members tab, the client can view all members, invite new ones, or remove existing members.
+
+![Team members table showing name, email, role, and status](/images/placeholder-team-members.png)
+
+</Steps>
+
+<Callout>
+The Account owner is the only user who can invite or remove team members. There is no limit to the number of members that can be added.
+</Callout>

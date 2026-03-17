@@ -1,0 +1,42 @@
+---
+title: Integrations
+description: Connect the platform with project management tools like Jira, Trello, and Azure DevOps.
+---
+
+import { Callout, Steps } from 'nextra/components'
+
+# Integrations
+
+The Integrations tab within each touchpoint allows the client to connect the platform with project management tools, enabling seamless issue tracking within existing workflows.
+
+![Integrations tab showing available integrations with Jira, Trello, and Azure DevOps](/images/placeholder-integrations.png)
+
+## Available integrations
+
+- **Jira Cloud** (available): Send accessibility findings to Jira with severity and WCAG references. Issue status is synchronized bidirectionally between the platform and Jira.
+- **Trello** (coming soon): Turn accessibility findings into Trello cards and track remediation progress across boards and workflows.
+- **Azure DevOps** (coming soon): Sync accessibility issues with Azure DevOps work items for teams using Microsoft's development ecosystem.
+
+<Steps>
+
+### Open the Integrations tab
+
+The client navigates to a touchpoint and selects the Integrations tab to see available connections.
+
+### Configure Jira
+
+The client clicks "Configure" next to Jira Cloud to start the setup process, connecting the platform to the organization's Jira instance.
+
+![Jira integration setup showing the configuration flow](/images/placeholder-integrations-tab.png)
+
+![Jira setup walkthrough demonstrating the full configuration process](/images/video-jira-setup.gif)
+
+### Link issues to Jira tickets
+
+Once configured, the client can link individual issues to Jira tickets directly from the issue detail Jira tab.
+
+</Steps>
+
+<Callout>
+The Jira integration supports bidirectional status synchronization, so changes made in Jira are reflected in the platform and vice versa.
+</Callout>
