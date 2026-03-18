@@ -1,0 +1,4 @@
+/* Fix: active sidebar link — improve contrast ratio to meet WCAG 1.4.3 AA */
+.nextra-sidebar-container a.nx-bg-primary-100 {
+  color: #0c2775 !important;
+}
