@@ -12,6 +12,9 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "overrides": {
+    "next-mdx-remote": "6.0.0"
+  },
   "dependencies": {
     "next": "^14.2.35",
     "nextra": "^2.13.4",
