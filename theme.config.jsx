@@ -14,4 +14,9 @@ export default {
   useNextSeoProps() {
     return { titleTemplate: '%s – AccessiWay Docs' }
   },
+  head: (
+    <>
+      <link rel="icon" type="image/png" href="/favicon.png" />
+    </>
+  ),
 }
