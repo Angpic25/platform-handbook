@@ -13,7 +13,7 @@ export default {
   toc: {
     float: true,
     extraContent: (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', paddingTop: '1rem', borderTop: '1px solid #e5e7eb' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', paddingTop: '0.5rem' }}>
         <a
           href="https://slack.com/app_redirect?channel=platform-internal-feedbacks"
           target="_blank"
