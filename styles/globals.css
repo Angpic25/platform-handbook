@@ -1,4 +1,19 @@
 /* Fix: active sidebar link — improve contrast ratio to meet WCAG 1.4.3 AA */
+
+/* Light mode: darken active link text */
 .nextra-sidebar-container a.nx-bg-primary-100 {
   color: #0c2775 !important;
+}
+
+/* Dark mode: inactive sidebar links — gray-500 on near-black fails contrast */
+/* Bump to gray-300 equivalent (#d1d5db) for sufficient contrast */
+.dark .nextra-sidebar-container a {
+  color: rgb(209, 213, 219) !important; /* gray-300 */
+}
+
+/* Dark mode: active sidebar link — keep it visibly distinct */
+.dark .nextra-sidebar-container a.nx-bg-primary-100,
+.dark .nextra-sidebar-container a[class*="nx-text-primary"] {
+  color: #93c5fd !important; /* blue-300, readable on dark bg */
+  background-color: rgba(59, 130, 246, 0.15) !important; /* subtle blue tint */
 }
