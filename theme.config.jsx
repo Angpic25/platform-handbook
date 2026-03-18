@@ -5,6 +5,21 @@ export default {
     icon: <span style={{ fontSize: '0.875rem', fontWeight: 600 }}>Open Platform →</span>,
   },
   footer: { text: 'AccessiWay Internal Training Documentation' },
+  feedback: {
+    content: '💬 Give us feedback →',
+    link: 'https://slack.com/app_redirect?channel=platform-internal-feedbacks',
+  },
+  editLink: {
+    component: () => (
+      <a
+        href="https://slack.com/app_redirect?channel=platform-internal-feedbacks"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🐛 Report a problem →
+      </a>
+    ),
+  },
   sidebar: {
     toggleButton: true,
   },
