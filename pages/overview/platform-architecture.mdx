@@ -1,46 +1,44 @@
 ---
 title: Platform Architecture
-description: How the platform is structured around Accounts, Touchpoints, and Issues.
+description: How the platform is structured around Organizations, Touchpoints, and Analysis.
 ---
-
-import { Callout } from 'nextra/components'
 
 # Platform Architecture
 
-The platform follows a clear hierarchy: **Account → Touchpoints → Issues**.
+The platform is built around a three-level hierarchy: **Organization → Touchpoint → Analysis**.
 
-## Account (Organization)
+![Diagram showing the platform hierarchy: Organization at the top, Account with members below, then Touchpoints, each with their own Analysis containing issues by severity](/images/diagram-architecture.png)
 
-An Account represents a single client organization (company). Each Account is created when a new client is onboarded to the platform. The Account is the top level container that holds all of the organization's accessibility data, settings, team members, and integrations.
+## Organization
 
-There is one Account per organization. All team members within the organization share the same Account and can see the same data.
+At the top level sits the Organization, which represents the client company (for example, Westpac Bank). The Organization is the entry point that defines the scope of everything inside the platform.
+
+## Account
+
+Each Organization has one Account. The Account is the shared workspace that all team members access. It holds all the organization's accessibility data, settings, and integrations in one place.
+
+Each Account has a single **Owner**, who is responsible for managing access. The Owner can invite an unlimited number of team members, each with their own login. All members share the same view of the data within the Account.
 
 ## Touchpoints
 
-Under each Account, there can be multiple Touchpoints. A Touchpoint represents a single website or digital application that is subject to accessibility analysis. For example, a banking group might have four separate touchpoints: a consumer banking site, a business payments portal, a wealth management platform, and a corporate website.
+Within the Account, there can be multiple Touchpoints. Each Touchpoint represents a single website or digital application that has been audited for accessibility. For example, a banking group might have one Touchpoint for their consumer site, one for their payments portal, and one for their wealth management platform.
 
-Each Touchpoint has its own compliance dashboard, issue list, trend charts, and integration settings.
+Each Touchpoint is managed independently, with its own compliance dashboard, trend charts, and integration settings.
 
-## Issues
+## Analysis
 
-Each Touchpoint contains a list of accessibility Issues identified by AccessiWay experts during audits. Issues are the core unit of work in the platform. Each issue includes a description, WCAG criteria, severity level, status, suggested fix, and expert comments.
+Each Touchpoint contains an Analysis, which is where all the accessibility work happens. The Analysis includes the full list of issues identified by AccessiWay experts during the audit, grouped by severity (Critical, High, Low). Each issue comes with a description, the relevant WCAG criterion, a suggested fix, and expert comments.
 
-## Architecture diagram
-
-![Platform architecture diagram showing the hierarchy from Account to Touchpoints to Issues, with real data from a sample client](/images/placeholder-architecture.png)
+The Analysis is updated every time a new audit is completed or a retest is performed.
 
 ## Key components
 
 | Component | Description |
 |-----------|-------------|
-| **Home dashboard** | Company level overview with key metrics and highest impact touchpoints |
+| **Home dashboard** | Organization level overview with key metrics and highest impact touchpoints |
 | **Touchpoint overview** | Compliance metrics, trend chart, user impact breakdown, and user flows for a single touchpoint |
 | **Issue list** | Filterable, sortable table of all accessibility issues for a touchpoint |
 | **Issue detail sidebar** | Side panel with three tabs (Overview, Fix, Jira) showing full issue information |
 | **Expert retest** | On demand review by AccessiWay experts to validate that fixes meet accessibility requirements |
 | **Integrations** | Connect with project management tools (Jira available, Trello and Azure DevOps coming soon) |
 | **Settings** | Security (2FA) and team member management |
-
-<Callout type="warning">
-TO COMPLETE: add screenshots of each architectural layer once the platform walkthrough is recorded.
-</Callout>
