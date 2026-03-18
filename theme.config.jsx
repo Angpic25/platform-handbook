@@ -6,7 +6,7 @@ export default {
   },
   footer: { text: 'AccessiWay Internal Training Documentation' },
   feedback: {
-    content: '💬 Give us feedback →',
+    content: <span style={{ fontSize: '0.95rem' }}>💬 Give us feedback →</span>,
     link: 'https://slack.com/app_redirect?channel=platform-internal-feedbacks',
   },
   editLink: {
@@ -15,6 +15,7 @@ export default {
         href="https://slack.com/app_redirect?channel=platform-internal-feedbacks"
         target="_blank"
         rel="noopener noreferrer"
+        style={{ fontSize: '0.95rem' }}
       >
         🐛 Report a problem →
       </a>
