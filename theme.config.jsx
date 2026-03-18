@@ -1,5 +1,5 @@
 export default {
-  logo: <span style={{ fontWeight: 800 }}>Platform Training Docs</span>,
+  logo: <span style={{ fontWeight: 800 }}>Platform Handbook</span>,
   project: {
     link: 'https://platform.accessiway.com',
     icon: <span style={{ fontSize: '0.875rem', fontWeight: 600 }}>Open Platform →</span>,
