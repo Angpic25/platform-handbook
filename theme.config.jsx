@@ -6,7 +6,7 @@ export default {
   },
   footer: { text: 'AccessiWay Internal Training Documentation' },
   feedback: {
-    content: '💬 Feedback or questions? →',
+    content: <span style={{ fontSize: '0.95rem' }}>💬 Feedback or questions? →</span>,
     useLink: () => 'https://accessiway.slack.com/channels/platform-internal-feedbacks'
   },
   editLink: { component: () => null },
