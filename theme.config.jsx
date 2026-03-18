@@ -1,6 +1,9 @@
 export default {
-  logo: <span style={{ fontWeight: 800 }}>AccessiWay — Training Docs</span>,
-  project: { link: 'https://platform.accessiway.com' },
+  logo: <span style={{ fontWeight: 800 }}>Platform Training Docs</span>,
+  project: {
+    link: 'https://platform.accessiway.com',
+    icon: <span style={{ fontSize: '0.875rem', fontWeight: 600 }}>Open Platform →</span>,
+  },
   footer: { text: 'AccessiWay Internal Training Documentation' },
   sidebar: {
     toggleButton: true,
