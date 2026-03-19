@@ -4,7 +4,7 @@ export default {
     link: 'https://platform.accessiway.com',
     icon: <span style={{ fontSize: '0.875rem', fontWeight: 600 }}>Open Platform →</span>,
   },
-  footer: { text: 'AccessiWay Internal Training Documentation' },
+  footer: { text: 'From your Product Team, with care 🌱' },
   feedback: {
     content: <span style={{ fontSize: '0.95rem' }}>📣 Feedback or questions? →</span>,
     useLink: () => 'https://accessiway.slack.com/channels/platform-internal-feedbacks'
