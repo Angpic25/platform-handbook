@@ -7,7 +7,7 @@ export default {
   footer: { text: 'From your Product Team, with care 🌱' },
   feedback: {
     content: <span style={{ fontSize: '0.95rem' }}>📣 Feedback or questions? →</span>,
-    useLink: () => 'https://accessiway.slack.com/channels/platform-internal-feedbacks'
+    useLink: () => 'https://teamdotblue.slack.com/archives/C0AMCK3M7QE'
   },
   editLink: { component: () => null },
   sidebar: {
