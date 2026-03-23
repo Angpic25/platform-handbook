@@ -8,7 +8,16 @@ export default function App({ Component, pageProps }) {
     if (navs[1]) navs[1].setAttribute('aria-label', 'Sidebar')
     const aside = document.querySelector('aside')
     if (aside) aside.setAttribute('aria-label', 'On this page')
+    const main = document.querySelector('main')
+    if (main) main.setAttribute('id', 'main-content')
   }, [])
 
-  return <Component {...pageProps} />
+  return (
+    <>
+      <a className="skip-to-content" href="#main-content">
+        Skip to main content
+      </a>
+      <Component {...pageProps} />
+    </>
+  )
 }
