@@ -19,35 +19,32 @@ This flow starts when a deal is closed or a renewal is purchased, and ends with 
 
 <Steps>
 
-### [PM + Expert] Decide: new audit or update existing?
+### Decide: new audit or update existing?
 
 The PM and the expert align on whether to start from scratch or build on a previous analysis.
 
-- **Website changed significantly or is completely new** → the expert creates a new audit from scratch
-- **Similar website, efficient to build on** → the expert starts from an existing analysis
+- **Website changed significantly or is completely new** — the expert creates a new audit from scratch
+- **Similar website, efficient to build on** — the expert starts from an existing analysis
 
-### [Expert] Upload to Chrome Extension
+### Upload to Chrome Extension
 
-Regardless of the path taken above, the expert uploads the audit data via the Chrome Extension.
+The expert uploads the audit data via the Chrome Extension.
 
-### [Expert] Send to platform — audit ready
+### Send to platform — audit ready
 
 The expert marks the audit as ready and sends it to the platform.
 
-### [Product] it7-dev-platform-bot notification: audit ready
+### Notification via it7-dev-platform-bot
 
 The product team receives a Slack notification via `#it7-dev-platform-bot` confirming the audit is live.
 
-At this point two things happen in parallel:
+At this point two things happen in parallel: the product team creates the support account for the PM, and the PM schedules a meeting with the client for the results presentation.
 
-- **[Product]** Creates the support account for the PM
-- **[PM]** Schedules a meeting with the client for the results presentation
-
-### [PM] Presents results and creates client account during the call
+### Present results and create client account
 
 The PM presents the platform results to the client during the scheduled call and creates the client account independently during the session.
 
-### [Client] First login — onboarding video shown on entry
+### First login — onboarding video shown on entry
 
 The client completes their first login. An onboarding video is shown automatically on entry.
 
@@ -59,7 +56,7 @@ The client completes their first login. An onboarding video is shown automatical
 
 ## Second touchpoints onwards
 
-This flow applies when a new audit is ready for a client who is already on the platform. The PM does not need to intervene.
+This flow applies when a new audit is ready for a client who is already on the platform. No PM intervention is needed.
 
 <Steps>
 
@@ -67,21 +64,21 @@ This flow applies when a new audit is ready for a client who is already on the p
 
 The expert has completed a new audit and it is ready to be published.
 
-### [Expert] Send to platform — audit ready
+### Send to platform — audit ready
 
 The expert marks the audit as ready and sends it to the platform.
 
-### [Product] it7-dev-platform-bot notification: audit ready
+### Notification via it7-dev-platform-bot
 
 The product team receives a Slack notification via `#it7-dev-platform-bot` confirming the audit is live.
 
-### [Product] Transactional email automatically sent to client
+### Transactional email automatically sent to client
 
 A transactional email is triggered automatically and sent to the client.
 
-### [Client] Logs in independently — no PM intervention needed
+### Client logs in independently
 
-The client receives the email and accesses the platform on their own.
+The client receives the email and accesses the platform on their own. No PM intervention is needed.
 
 </Steps>
 
