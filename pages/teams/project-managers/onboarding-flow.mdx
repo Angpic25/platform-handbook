@@ -1,40 +1,94 @@
 ---
 title: Onboarding Flow
-description: End-to-end process for onboarding a client to the AccessiWay Platform after a new audit is ready.
+description: End-to-end onboarding flows for new clients and second touchpoints onwards.
 ---
 
-import { Steps, Callout } from 'nextra/components'
+import { Steps, Callout, Tabs } from 'nextra/components'
 
 # Onboarding Flow
 
-This is the end-to-end flow that happens when a new audit is ready and the client needs to be onboarded to the platform. The goal is for the client to log in independently, with no PM intervention needed.
+There are two distinct flows depending on whether the client is accessing the platform for the first time or receiving a new audit on an existing account.
 
-![Onboarding flow diagram showing the steps from new audit available to client login](/images/onboarding-flow.png)
+<Tabs items={['New customer or first time in platform', 'Second touchpoints onwards']}>
+
+<Tabs.Tab>
+
+## New customer or existing customer (first time in platform)
+
+This flow starts when a deal is closed or a renewal is purchased, and ends with the client's first login.
+
+<Steps>
+
+### [PM + Expert] Decide: new audit or update existing?
+
+The PM and the expert align on whether to start from scratch or build on a previous analysis.
+
+- **Website changed significantly or is completely new** → the expert creates a new audit from scratch
+- **Similar website, efficient to build on** → the expert starts from an existing analysis
+
+### [Expert] Upload to Chrome Extension
+
+Regardless of the path taken above, the expert uploads the audit data via the Chrome Extension.
+
+### [Expert] Send to platform — audit ready
+
+The expert marks the audit as ready and sends it to the platform.
+
+### [Product] it7-dev-platform-bot notification: audit ready
+
+The product team receives a Slack notification via `#it7-dev-platform-bot` confirming the audit is live.
+
+At this point two things happen in parallel:
+
+- **[Product]** Creates the support account for the PM
+- **[PM]** Schedules a meeting with the client for the results presentation
+
+### [PM] Presents results and creates client account during the call
+
+The PM presents the platform results to the client during the scheduled call and creates the client account independently during the session.
+
+### [Client] First login — onboarding video shown on entry
+
+The client completes their first login. An onboarding video is shown automatically on entry.
+
+</Steps>
+
+</Tabs.Tab>
+
+<Tabs.Tab>
+
+## Second touchpoints onwards
+
+This flow applies when a new audit is ready for a client who is already on the platform. The PM does not need to intervene.
 
 <Steps>
 
 ### New audit available
 
-The audit has been completed by the expert and is ready to be uploaded to the platform.
+The expert has completed a new audit and it is ready to be published.
 
 ### [Expert] Send to platform — audit ready
 
-The expert marks the audit as ready and sends it to the platform, making the data available in the client's account.
+The expert marks the audit as ready and sends it to the platform.
 
-### [Product] Notification via it7-dev-platform-bot
+### [Product] it7-dev-platform-bot notification: audit ready
 
-The product team receives a Slack notification via the `#it7-dev-platform-bot` channel confirming that the audit is ready and live on the platform.
+The product team receives a Slack notification via `#it7-dev-platform-bot` confirming the audit is live.
 
-### [Product] Transactional email sent to client
+### [Product] Transactional email automatically sent to client
 
-A transactional email is automatically triggered and sent to the client, informing them that their platform is ready to use.
+A transactional email is triggered automatically and sent to the client.
 
-### [Client] Logs in independently
+### [Client] Logs in independently — no PM intervention needed
 
-The client receives the email and logs in to the platform on their own. No PM intervention is required at this stage.
+The client receives the email and accesses the platform on their own.
 
 </Steps>
 
+</Tabs.Tab>
+
+</Tabs>
+
 <Callout type="warning">
-The flow for collecting client email addresses at onboarding is still being defined. Current suggestion is to use an onboarding form (Monday Forms or equivalent) to capture the platform Owner's email. The Owner then creates the other company users directly in the platform.
+The flow for collecting client email addresses at account creation is still being defined. Current suggestion is to shift from Google Forms to Monday Forms and use an onboarding form to capture who the platform Owner is. The Owner would then create the other company users directly in the platform.
 </Callout>
