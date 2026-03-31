@@ -1,0 +1,40 @@
+---
+title: Onboarding Flow
+description: End-to-end process for onboarding a client to the AccessiWay Platform after a new audit is ready.
+---
+
+import { Steps, Callout } from 'nextra/components'
+
+# Onboarding Flow
+
+This is the end-to-end flow that happens when a new audit is ready and the client needs to be onboarded to the platform. The goal is for the client to log in independently, with no PM intervention needed.
+
+![Onboarding flow diagram showing the steps from new audit available to client login](/images/onboarding-flow.png)
+
+<Steps>
+
+### New audit available
+
+The audit has been completed by the expert and is ready to be uploaded to the platform.
+
+### [Expert] Send to platform — audit ready
+
+The expert marks the audit as ready and sends it to the platform, making the data available in the client's account.
+
+### [Product] Notification via it7-dev-platform-bot
+
+The product team receives a Slack notification via the `#it7-dev-platform-bot` channel confirming that the audit is ready and live on the platform.
+
+### [Product] Transactional email sent to client
+
+A transactional email is automatically triggered and sent to the client, informing them that their platform is ready to use.
+
+### [Client] Logs in independently
+
+The client receives the email and logs in to the platform on their own. No PM intervention is required at this stage.
+
+</Steps>
+
+<Callout type="warning">
+The flow for collecting client email addresses at onboarding is still being defined. Current suggestion is to use an onboarding form (Monday Forms or equivalent) to capture the platform Owner's email. The Owner then creates the other company users directly in the platform.
+</Callout>

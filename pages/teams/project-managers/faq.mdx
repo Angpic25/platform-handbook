@@ -1,0 +1,46 @@
+---
+title: FAQ
+description: Answers to the most common questions about the AccessiWay Platform for Project Managers.
+---
+
+import { Callout } from 'nextra/components'
+
+# FAQ
+
+Answers to the most common questions that come up when working with the AccessiWay Platform as a Project Manager.
+
+---
+
+### What is the rationale for uploading (or not uploading) a client's previous audit to the platform?
+
+There is no defined rationale. Any previous audit can be imported into the platform if the expert or PM decides it makes sense to do so. To date, the only reason to import a previous audit is in renewal scenarios, where the expert determines it is worth resuming from the still-open issues identified in the prior audit.
+
+---
+
+### Is the retest scoped to individual issues or to the full audit?
+
+All issues, for the time being. The system technically supports requesting a retest on individual issues, but this has not been discussed from a commercial standpoint, so there is currently no production mechanism for requesting a retest on specific issues.
+
+---
+
+### Is there a cap on how many retests a client can request?
+
+One per audit cycle, as defined by the subscription package. Once the retest has been requested, the platform shows the user that no further requests can be submitted. The platform is built to allow this capability to be reactivated when needed.
+
+---
+
+### When a retest is requested, how does the PM get notified?
+
+When a client requests a retest, PMs are notified via email and through the dedicated Slack channel `#it7-dev-platform-bot`, which indicates which touchpoint the retest has been requested for. The PM must then schedule it as usual and log it manually in Monday, since neither product is currently connected to Monday.
+
+---
+
+### What is the purpose of the support account that PMs create alongside the client account?
+
+The support account serves two purposes. First, it allows PMs to have visibility into client audits and present them during meetings (this is a first version, with a future admin panel planned to handle these needs more systematically). Second, it allows support staff to intervene directly within a client's account to investigate and report any issues.
+
+The support account enables access to an organization and its touchpoints without the client's knowledge, and can also invite the Owner and other members.
+
+<Callout type="warning">
+The flow for gathering client emails at account creation is still being defined. Current suggestion is to shift from Google Forms to Monday Forms, and to use an onboarding form to capture who the platform Owner is. The platform Owner would then create the other company users directly.
+</Callout>
