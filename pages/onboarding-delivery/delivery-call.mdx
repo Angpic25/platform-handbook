@@ -1,12 +1,254 @@
 ---
 title: Delivery Call
-description: How to present the AccessiWay Platform to the client during the delivery call.
+description: Structured guide for Project Managers and Accessibility Experts running the Onboarding and Delivery Call.
 ---
 
 import { Callout } from 'nextra/components'
 
-# Delivery Call
+# Onboarding & Delivery Call
+
+| Format | Duration | Tiers | Audience |
+|--------|----------|-------|----------|
+| Live call (remote) | ~60 minutes | Silver & Gold | PM, Dev, Legal |
+
+This guide gives the PM and the Accessibility Expert a shared, structured framework for the 1-hour Onboarding & Delivery Call. It is intentionally high-level: it defines what to cover and in what order, not the exact words to use.
+
+This call serves two simultaneous goals: **(1) onboard the client onto the platform** so they can operate independently, and **(2) present the expert audit findings** in a way that drives immediate remediation action.
+
+<Callout>
+The platform is not an automated scanner. The client needs to understand from the first minute that what they see is expert work — structured for action, not a generated report.
+</Callout>
+
+**Video demo of the pitch:** [PM Expert Platform pitch — Onboarding & Delivery Call](https://www.loom.com/share/9bec5c9c614d413b836bf2a5fccc11cb)
+
+## Call at a glance
+
+| # | Segment | Owner | Duration | Objective |
+|---|---------|-------|----------|-----------|
+| **0** | Pre-call prep | PM | Before the call | Platform ready, expert has access, top issues identified |
+| **1** | PM: Platform Onboarding | Project Manager | ~20 minutes | Client understands the platform structure and how to read their results |
+| **2** | Expert: Audit Findings | Accessibility Expert | ~30 minutes | Client understands the critical issues, impact, and where to start fixing |
+| **3** | PM: Close / Next Steps / Q&A | Project Manager | ~10 min (within the hour) | Client understands issues lifecycle, and knows what to do next |
 
 <Callout type="warning">
-This page is a placeholder. Content coming soon.
+The call should not start until the audit is fully loaded into the platform. The client must never log into an empty system.
 </Callout>
+
+## Tier differences: Silver vs Gold
+
+| | Silver | Gold |
+|--|--------|------|
+| **Expert support hours** | 1 hour (this call uses it) | 3 hours — more time for strategic guidance |
+| **Retest** | Not included | 1 retest per touchpoint — explain when to use |
+| **Audit depth** | Full WCAG 2.2 AA, 10 templates | Full WCAG 2.2 AA, 25 templates |
+
+---
+
+## 0. Pre-call preparation
+
+These actions must be completed before the call starts. Nothing in this list takes more than 15 minutes.
+
+| | Action | Why |
+|--|--------|-----|
+| ✓ | Verify that the platform credentials work correctly | PM and Expert will log directly live into the platform to present the audit — a broken credential is a bad first impression |
+| ✓ | Review the top Critical issues in the platform — understand what the expert will present | The PM must be able to manage timing and redirect if a single issue consumes too much time |
+| ✓ | Confirm with the expert which issues will be shown and in what order | The handoff between PM and expert must feel coordinated, not improvised |
+| ✓ | Check whether the client's tier includes a badge (Silver & Gold: yes) and retest (Gold only) | These are common questions — be prepared before the client asks |
+| ✓ | Set up screen sharing in advance — only the platform should be visible, no extra tabs | Professionalism of the demo matters — distractions undermine confidence |
+
+---
+
+## 1. PM section — ~20 minutes
+
+<Callout>
+The PM's role in the first 20 minutes is not to explain every feature. It is to give the client a mental model of the platform so that when the expert takes over, the client follows along — not just watches.
+</Callout>
+
+### 1.1 Welcome, introductions & agenda (~3 min)
+
+Introduce all attendees (PM, Expert, client-side participants). Set the agenda explicitly — tell the client what will happen and in what order. Confirm who from the client side is attending and their roles. Review the [Procedure — Standards in client meetings](https://docs.google.com/document/d/1Iwbg4Dsw8xAXL1xiyL1onHtYZijvcnpY0eWKnvDdWZ8/edit?usp=sharing) for further details on how to properly set up and handle a meeting.
+
+**Objective:** Everyone in the room understands the agenda. The client knows they will see the platform, then hear from the expert.
+
+### 1.2 Platform introduction (~5 min)
+
+Before opening the platform, explain what it is. Key messages to land:
+
+- The platform is a **live dashboard** that presents the expert's audit results in a structured format — a live, interactive issue tracker connected to the client's workflow.
+- The key advantage is having **humans in the loop**: the certified expertise of AccessiWay specialists is embedded in the platform. Every fix is verified by a qualified human.
+- **Continuous accessibility lifecycle integration:** Jira & project management tools integration (next releases) — issues go directly into the dev team's existing workflow.
+- **Multi-touchpoint tracking:** track progress across all touchpoints from a single view.
+- Accessibility scores, highlights of major issues so that the client knows what to fix first, and suggested priorities to follow during remediation.
+
+Platform walkthrough — high level and quick overview of the main sections:
+
+| Feature | What it does |
+|---------|-------------|
+| **Home Dashboard** | Company level overview with key metrics and highest impact touchpoints |
+| **Touchpoints List** | Browse and navigate all touchpoints in the account |
+| **Touchpoint Overview** | Compliance metrics, trend chart, user impact, and most critical pages for a single touchpoint |
+| **Issue Management** | Filter, sort, search, and export accessibility issues |
+| **Issue Detail** | Full issue information with Overview, Fix, and Jira tabs |
+| **Integrations** | Connect with Jira, Azure DevOps (coming soon) |
+| **Settings** | Security (2FA) and team member management |
+| **Platform Guide** | In-platform onboarding, feature explanations, and FAQ |
+
+**Objective:** The client understands the platform's nature before seeing it. They will not mistake it for a generic SaaS tool.
+
+### 1.3 Touchpoint overview walkthrough (~7 min)
+
+Navigate directly to the Touchpoint Overview. Walk the client through four elements in sequence:
+
+| Element | What to explain | Watch out for |
+|---------|----------------|---------------|
+| **Status Metrics** | Four counters: Open, Fixed, Resolved, Dismissed. Emphasise the difference between Fixed (client action) and Resolved (AccessiWay validation). Only Resolved issues affect the score. | This is the most common confusion point in the first weeks of use. |
+| **Compliance Score** | It is the mathematical ratio between the number of criteria met and the total number of technical criteria that need to be compliant. It is a starting point that must be correlated with other metrics relevant to real accessibility impact. It only increases when AccessiWay validates a fix (Resolved), not when the client marks it as done (Fixed). | Clients often expect the score to rise immediately after their dev team fixes something. Clarify the Fixed vs Resolved distinction now or they will call you confused later. |
+| **Trend Chart** | Shows how issue statuses evolve over time. At first audit, it shows one data point — no trend yet. This will become the client's internal proof-of-progress tool as they fix and retest. Exportable to CSV. | Set expectations: the chart becomes meaningful from the second reporting cycle onward. |
+| **Issues by severity & Critical Pages** | Issues grouped by impact on end users (Critical blocks access, High impairs it, Low degrades experience). Critical Pages shows which pages concentrate the most critical issues — this is the starting point for prioritisation. | This section is the bridge between the platform overview and the expert's presentation. Use it to set the scene before handing over. |
+
+<Callout>
+If needed and asked, highlight that the compliance score increases by around 0.7% for each WCAG criterion completely solved (meaning no issues related to that criterion remain open).
+</Callout>
+
+### 1.4 Introducing the issues section (~3 min)
+
+Navigate to the Issues list. Frame it as the team's **remediation backlog** — not a fault list. Point out the three most important columns:
+
+- **Severity** — the priority signal. Start here.
+- **Status** — tracks where each issue is in the workflow.
+- **Type (Recurring vs Unique)** — a Recurring issue fixed once is fixed everywhere it appears. High leverage for developers.
+
+Show how to apply Quick filters and Custom filters:
+
+![Filter modal showing Quick filters and advanced filter options for severity, status, type, and WCAG criteria](/images/delivery-call-filter-modal.png)
+
+**Gold tier:** briefly explain the retest here. The client has 1 included retest per touchpoint. Advise them not to use it too early — the best moment is after completing the Critical issues on the priority user flow identified in the Overview.
+
+- Push the client to do the retest ideally within 6 months after the audit date. This allows Account Managers to handle the renewal phase more effectively.
+- The status marked by the client as "Fixed" is visible immediately. The notification to perform the retest is triggered only when the client clicks the dedicated button.
+
+### 1.5 Expert positioning (~2 min)
+
+Close this section by handing over to the Expert. The transition must be explicit: tell the client why the expert is now taking over and what they should expect from the next part of the call.
+
+Before the Expert speaks, the PM formally introduces them — briefly but meaningfully. The message to convey: the findings were produced by a certified human expert, not a tool, and the expert on this call knows the audit intimately.
+
+---
+
+## 2. Accessibility Expert section — ~40 minutes
+
+<Callout>
+The Expert's goal is not to list every error. It is to give the client a clear, prioritised reading of what matters, why it matters, and where to start. Quality of insight over quantity of issues.
+</Callout>
+
+### 2.1 Critical issues deep dive (~20–25 min)
+
+For each Critical issue, open the side panel and walk through:
+
+- What the problem is — described in plain language, not just WCAG code
+- Who is affected — which type of user, what assistive technology, what happens to them
+- Where it appears — is it Recurring (sitewide) or Specific (one page)?
+- The Fix tab — show the expert-written remediation guidance
+
+**Prioritisation logic:** Present Criticals first, then Recurring Highs. Within each severity level, tackle Recurring issues before Specific ones — the developer effort-to-impact ratio is better.
+
+### 2.2 Selected High issues (~10–12 min)
+
+After the Criticals, select 3–5 High issues to present. Prioritise issues that:
+
+- Represent WCAG criteria not already covered by the Criticals — broadens the client's understanding of accessibility requirements
+- Are Recurring — high developer leverage, fix once and the impact is sitewide
+- Affect key user flows: checkout, login, contact forms, search — these matter most to end users and to regulators
+
+Keep commentary focused on user impact, not technical depth. The developer audience will read the Fix tab — the PM and Legal audience need to understand business and compliance risk.
+
+### 2.3 Recommended remediation approach (~5 min)
+
+Close the expert section with a summary of the recommended remediation order:
+
+| Priority | Issue type | Rationale |
+|----------|-----------|-----------|
+| **1** | Critical (all) | These block or near-block users from completing core actions |
+| **2** | Recurring High | Fix once, resolve sitewide — maximum dev leverage |
+| **3** | Specific High (key flows) | High-impact pages: checkout, login, forms, search |
+| **4** | Quick wins | Issues related to the above selections with the same WCAG criteria — can be tackled quickly (e.g. html lang, skiplink) |
+| **5** | Recurring Low | Wide reach, lower severity — batch these in a sprint |
+| **6** | Specific Low | Lower urgency — schedule after higher priorities |
+
+**Gold tier:** briefly remind the client how the retest works, summarising the PM's earlier explanation.
+
+<Callout>
+Important tip: use the WAA file on one screen and the platform on a second screen (the only one shared). Prior to the call, highlight in the WAA which issues will be presented during the delivery call.
+</Callout>
+
+---
+
+## 3. PM closes — ~10 minutes (within the hour)
+
+The PM retakes the floor after the expert finishes, or at any earlier point if the expert runs long or a question about process or contract arises. The goal is to ensure the client leaves with clear next actions and no confusion about how the platform works day-to-day.
+
+### 3.1 Issue lifecycle (~3 min)
+
+Explain the full loop in plain language:
+
+Dev team fixes an issue → marks it as **Fixed** → AccessiWay retests → if correct, marks as **Resolved** → Score updates.
+
+**Dismiss:** clarify this is not an escape mechanism. It is a conscious decision to archive an issue — it stays in the system. Appropriate for issues the client has evaluated and decided not to fix for a documented business reason.
+
+### 3.2 Practical tools (~3 min)
+
+Mention each tool briefly. Go deeper only if the client shows active interest.
+
+| Tool | What it does | When to raise |
+|------|-------------|---------------|
+| **Export Issue List** | Downloads the full issue list as CSV (respects any active filters). Useful when the dev team works outside the platform or needs to share a list with an external agency. | If developers or external vendors are in the call |
+| **Jira Integration** | Syncs issues bidirectionally with Jira Cloud. Issues appear in the dev workflow automatically. Status changes in Jira update in the platform. | If developers are on the call or the client uses Jira |
+| **Retest (Gold only)** | Request expert re-validation after a significant round of fixes. Button: Ask for a retest in the Issues section. Only Fixed issues are reviewed. Best used after completing all Criticals on the priority user flow. | Gold clients only — give a concrete milestone, not a vague "when you're done" |
+
+### 3.3 Identify the platform owner & send invite (~3 min)
+
+Before the call ends, confirm who the platform owner will be. This is the person responsible for managing issues, updating statuses, and coordinating the development team.
+
+- If the owner is on the call: invite them immediately from Settings > Team Members.
+- If the owner is not on the call: get their name and email before the call ends and send the invite the same day.
+- The owner then invites the rest of the team independently.
+
+<Callout>
+Each user invited to the platform receives an in-app onboarding video that covers all features. The PM does not need to do a full platform walkthrough on this call — the video covers it. Keep the focus on the audit results.
+</Callout>
+
+### 3.4 Wrap-up & explicit next steps (~1 min)
+
+Close the call with clear, stated next steps:
+
+- Confirm who is the platform owner and that the invite has been (or will be) sent
+- The PM will send a follow-up email with a summary of the call, key points, and next steps
+- The tutorial video will be available on first login inside the platform
+
+**Gold:** confirm the next scheduled touchpoint and suggest a time for another technical Q&A — ideally 3 weeks from the first Onboarding & Delivery call. This pushes the use of the 2nd expert support hour and keeps momentum alive.
+
+---
+
+## Appendix: Messaging guardrails
+
+These rules apply throughout the call. They protect credibility, manage legal risk, and keep the narrative accurate.
+
+| Don't say | Say instead | Why |
+|-----------|------------|-----|
+| "We make you compliant." | "We give you the visibility and tools to manage compliance continuously." | Compliance is never finished. This creates false expectations and legal exposure. |
+| "The platform fixes accessibility for you." | "The platform connects issues to the teams who can fix them and gives them what they need to act." | Resolution always requires action from the client's dev team. |
+| "We offer an automatic solution." | "AI handles detection at scale. Humans handle judgment and complex remediation. That's why our platform is hybrid." | Overclaiming automation undermines the value of human expertise — our core differentiator. |
+| "This replaces your need for accessibility consultants." | "The platform makes our experts' work more effective and gives your team the same structured approach." | Expert services are a core part of the value proposition, not a legacy item. |
+| "The platform is fully launched." | "You're joining as an early adopter — with direct influence on the product roadmap and priority access to new features." | Transparency about platform maturity builds trust. Never commit to release dates or specific timelines. |
+
+## Approved language for this call
+
+These lines have been validated for accuracy and tone. Use them as-is or adapt them.
+
+| Context | Approved line |
+|---------|--------------|
+| **Platform intro** | "Replace static reports with a continuously updated accessibility dashboard." |
+| **Issues section** | "Right now, after an audit, issues end up in a spreadsheet your team will ignore. The platform puts them in your dev team's workflow with tracking, priority, and expert guidance." |
+| **Jira** | "Your developers get issues in Jira — with location, context, and fix guidance. Not in a spreadsheet they'll ignore." |
+| **Dashboard value** | "You always know where your accessibility stands. No waiting for the next report." |
+| **Programme framing** | "From annual audit to continuous governance." |

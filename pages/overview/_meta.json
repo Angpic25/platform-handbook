@@ -2,6 +2,7 @@
   "product-summary": "Product Summary",
   "value-proposition": "Value Proposition",
   "platform-architecture": "Platform Architecture",
-  "user-journey": "User Journey",
+  "feature-availability": "Feature Availability by Tier",
+  "user-journey": "Full User Journey",
   "glossary": "Glossary"
 }

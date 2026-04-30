@@ -1,0 +1,78 @@
+---
+title: Feature Availability by Tier
+description: Overview of which platform features are available for each touchpoint based on the purchased tier.
+---
+
+import { Callout } from 'nextra/components'
+
+# Feature Availability by Tier
+
+The features available to each client depend on the tier purchased for their touchpoint. Use this page as a reference when preparing for a delivery call, answering client questions, or configuring a new account.
+
+When a feature is not available for a given tier, it is simply hidden from the client's interface — they will not see an error or a locked state, just no access to that section or functionality.
+
+<style>{`
+  .tier-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .tier-table th { padding: 10px 14px; text-align: center; font-weight: 500; font-size: 13px; }
+  .tier-table th:first-child { text-align: left; }
+  .tier-table td { padding: 8px 14px; border-top: 1px solid #e5e7eb; }
+  .tier-table tr.section-header td { background: #f3f4f6; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; padding: 6px 14px; }
+  .tier-table .yes { color: #16a34a; font-weight: 600; text-align: center; }
+  .tier-table .no { color: #dc2626; text-align: center; font-weight: 500; }
+  .tier-table th.bronze { color: #92400e; background: #fef3c7; border-radius: 4px; }
+  .tier-table th.silver { color: #374151; background: #f3f4f6; border-radius: 4px; }
+  .tier-table th.gold { color: #78350f; background: #fde68a; border-radius: 4px; }
+`}</style>
+
+<table className="tier-table">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th className="bronze">Bronze</th>
+      <th className="silver">Silver</th>
+      <th className="gold">Gold</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr className="section-header"><td colSpan={4}>Company Overview</td></tr>
+    <tr><td>Company overview</td><td className="no">✕</td><td className="no">✕</td><td className="yes">✓</td></tr>
+
+    <tr className="section-header"><td colSpan={4}>Touchpoints List</td></tr>
+    <tr><td>Audit date</td><td className="yes">✓</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+    <tr><td>Compliance %</td><td className="no">✕</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+    <tr><td>Total issues</td><td className="yes">✓</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+
+    <tr className="section-header"><td colSpan={4}>Touchpoint Overview</td></tr>
+    <tr><td>Touchpoint overview tab</td><td className="no">✕</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+    <tr><td>Compliance metrics (open / fixed / resolved)</td><td className="no">✕</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+    <tr><td>Issue trend chart + CSV export</td><td className="no">✕</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+    <tr><td>Issues by severity breakdown</td><td className="no">✕</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+    <tr><td>Most critical pages</td><td className="no">✕</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+
+    <tr className="section-header"><td colSpan={4}>Issue List</td></tr>
+    <tr><td>ID, Description, WCAG criteria, Severity, Status, Type, Pages</td><td className="yes">✓</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+    <tr><td>Comments</td><td className="no">✕</td><td className="no">✕</td><td className="yes">✓</td></tr>
+    <tr><td>Mitigation</td><td className="no">✕</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+    <tr><td>Export CSV / Excel</td><td className="yes">✓</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+    <tr><td>Mark as Fixed / Dismissed</td><td className="yes">✓</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+    <tr><td>Ask for a retest</td><td className="no">✕</td><td className="no">✕</td><td className="yes">✓</td></tr>
+
+    <tr className="section-header"><td colSpan={4}>Issue Detail</td></tr>
+    <tr><td>Screenshot, position, mitigation status</td><td className="no">✕</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+    <tr><td>Fix tab — suggested fix</td><td className="no">✕</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+    <tr><td>Fix tab — expert comments</td><td className="no">✕</td><td className="no">✕</td><td className="yes">✓</td></tr>
+    <tr><td>Jira tab</td><td className="no">✕</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+
+    <tr className="section-header"><td colSpan={4}>Integrations</td></tr>
+    <tr><td>Jira Cloud integration</td><td className="no">✕</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+
+    <tr className="section-header"><td colSpan={4}>General</td></tr>
+    <tr><td>2FA</td><td className="yes">✓</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+    <tr><td>Team members management</td><td className="yes">✓</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+    <tr><td>Platform guide + onboarding video</td><td className="yes">✓</td><td className="yes">✓</td><td className="yes">✓</td></tr>
+  </tbody>
+</table>
+
+<Callout type="info">
+**Company overview** — is an aggregated view of multi touchpoint's accessibility data. It is available to all clients with at least one Gold plan touchpoint.
+</Callout>
